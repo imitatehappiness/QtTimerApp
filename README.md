@@ -1,6 +1,3 @@
-
-# Timer App with Qt C++
-
 <p align="center">
   <a href="https://github.com/imitatehappiness/QtTimerApp">
       <img width="128" alt="multiple-users-silhouette" src="https://cdn-icons-png.flaticon.com/512/2421/2421935.png">
@@ -8,7 +5,7 @@
   <h3 align="center"></h3>
 </p>
 
-## Overview
+# Timer App with Qt C++
 
 This Timer App is a customizable productivity tool that allows users to set up time intervals for work, breaks, and rounds. The application features a user-friendly interface built using Qt C++ framework, providing a seamless experience for managing time and staying focused. The app offers the following functionalities:
 
