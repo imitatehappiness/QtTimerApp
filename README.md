@@ -1,3 +1,4 @@
+
 # Timer App with Qt C++
 
 <p align="center">
@@ -31,5 +32,7 @@ windeployqt --compiler-runtime C:/path_to_exe_file
 ./timer-app.exe
 ```
 ## Usage example
-https://github.com/imitatehappiness/QtTimerApp/assets/79199956/d3883338-4f54-4f4a-9786-39c15ab266a9
+https://github.com/imitatehappiness/QtTimerApp/assets/79199956/074d1bca-7cf4-4eb3-9963-ecd5cf219ae4
+
+
 
