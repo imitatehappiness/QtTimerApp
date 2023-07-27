@@ -1,0 +1,244 @@
+/* ========================== Variables =======================*/
+
+*{
+    font: 9pt "Junegull";
+}
+
+/* ========================== QMainWindow =======================*/
+
+QMainWindow {
+    background-color: rgb(24, 24, 24);
+}
+
+/* ==========================  QPushButton =======================*/
+QPushButton:focus {
+    outline: none; /* Убираем стандартную рамку или выделение */
+}
+
+QPushButton#pB_stop{
+    font: 48pt;
+    color: rgb(202, 49, 52);
+    background-color: rgb(24, 24, 24);
+    text-align: left;
+    border-color: rgb(24, 24, 24);
+    border: 1px solid rgb(24, 24, 24);
+}
+
+QPushButton:hover#pB_stop{
+    color: rgb(148, 148, 148);
+    background-color: rgb(24, 24, 24);
+    text-align: left;
+    border-color: rgb(24, 24, 24);
+}
+
+QPushButton:pressed#pB_stop{
+    color: rgb(80, 80, 80);
+    background-color: rgb(24, 24, 24);
+    text-align: left;
+    border-color: rgb(24, 24, 24);
+}
+
+QPushButton#pB_start_pause_resume{
+    font: 48pt;
+    color: rgb(115, 172, 10);
+    background-color: rgb(24, 24, 24);
+    text-align: left;
+    border-color: rgb(24, 24, 24);
+    border: 1px solid rgb(24, 24, 24);
+}
+
+QPushButton:hover#pB_start_pause_resume{
+    color: rgb(148, 148, 148);
+    background-color: rgb(24, 24, 24);
+    text-align: left;
+    border-color: rgb(24, 24, 24);
+}
+
+QPushButton:pressed#pB_start_pause_resume{
+    color: rgb(80, 80, 80);
+    background-color: rgb(24, 24, 24);
+    text-align: left;
+    border-color: rgb(24, 24, 24);
+}
+
+/* ========================== QLabel ========================== */
+
+QLabel{
+    font: 18px;
+    color: rgb(238, 238, 238);
+}
+
+QLabel#l_timer_value{
+    font: 120pt;
+    color: rgb(238, 238, 238);
+}
+
+QLabel#l_off_work{
+    font: 48pt;
+    color: rgb(115, 172, 10);
+}
+
+QLabel#l_total_remaining_value{
+    color: rgb(39, 154, 255);
+    font: 32pt;
+}
+
+QLabel#l_total_remaining,#l_reps,#l_work_time,#l_rest_time{
+    font: 32px;
+    color: rgb(238, 238, 238);
+}
+
+/* ========================== QSpinBox ========================== */
+
+QSpinBox{
+    color: rgb(39, 154, 255);
+    background-color: rgb(24, 24, 24);
+    text-align: left;
+    border-color: rgb(24, 24, 24);
+    border: 0px;
+    font: 32pt;
+}
+
+QSpinBox::up-arrow {
+    width: 64px;
+    image:url(:/resources/icons/up-arrows.png);
+}
+
+QSpinBox::down-arrow {
+    width: 64px;
+    image:url(:/resources/icons/down-arrows.png);
+}
+
+QSpinBox::up-arrow:hover {
+    image:url(:/resources/icons/up-arrows-hover.png);
+}
+
+QSpinBox::up-arrow:pressed {
+    image:url(:/resources/icons/up-arrows-hover.png);
+    top: -2px;
+}
+
+QSpinBox::down-arrow:pressed {
+    image:url(:/resources/icons/down-arrows-hover.png);
+    top: 2px;
+}
+
+QSpinBox::down-arrow:hover {
+    image:url(:/resources/icons/down-arrows-hover.png);
+}
+
+QSpinBox::up-button {
+    width: 64px;
+    border: transparent;
+}
+
+QSpinBox::down-button {
+    width: 64px;
+    border:transparent;
+}
+
+QSpinBox:disabled{
+    color: rgb(148, 148, 148);
+}
+
+QSpinBox::up-arrow:disabled {
+    image:url(:/resources/icons/up-arrows-hover.png);
+}
+
+QSpinBox::down-arrow:disabled {
+    image:url(:/resources/icons/down-arrows-hover.png);
+}
+
+/* ==========================  QTimeEdit ========================== */
+
+QTimeEdit{
+    color: rgb(39, 154, 255);
+    background-color: rgb(24, 24, 24);
+    text-align: left;
+    border-color: rgb(24, 24, 24);
+    border: 0px;
+    font: 32pt;
+}
+
+QTimeEdit::up-arrow {
+    width: 64px;
+    image:url(:/resources/icons/up-arrows.png);
+}
+
+QTimeEdit::down-arrow {
+    width: 64px;
+    image:url(:/resources/icons/down-arrows.png);
+}
+
+QTimeEdit::up-arrow:hover {
+    image:url(:/resources/icons/up-arrows-hover.png);
+}
+
+QTimeEdit::down-arrow:hover {
+    image:url(:/resources/icons/down-arrows-hover.png);
+}
+
+QTimeEdit::up-arrow:pressed {
+    image:url(:/resources/icons/up-arrows-hover.png);
+    top: -2px;
+}
+
+QTimeEdit::down-arrow:pressed {
+    image:url(:/resources/icons/down-arrows-hover.png);
+    top: 2px;
+}
+
+QTimeEdit::up-button {
+    width: 64px;
+    border: transparent;
+}
+
+QTimeEdit::down-button {
+    width: 64px;
+    border:transparent;
+}
+
+QTimeEdit:disabled{
+    color: rgb(148, 148, 148);
+}
+
+QTimeEdit::up-arrow:disabled {
+    image:url(:/resources/icons/up-arrows-hover.png);
+}
+
+QTimeEdit::down-arrow:disabled {
+    image:url(:/resources/icons/down-arrows-hover.png);
+}
+
+/* ========================== QMessageBox ========================== */
+
+QMessageBox  QLabel{
+    font: 9pt "Junegull";
+    color: rgb(24, 24, 24);
+}
+
+/* ========================== QMenu ========================== */
+QMenu{
+    color: rgb(39, 154, 255);
+    background-color: rgb(24, 24, 24);
+    text-align: left;
+    border-color: rgb(24, 24, 24);
+    border: 0px;
+    font: 9pt;
+}
+
+QMenu::item{
+    padding: 5px 5px 5px 5px;
+    width: 140px;
+ }
+
+
+QMenu::item:selected {
+    background-color: rgb(39, 154, 255);
+    color: rgb(24, 24, 24);
+ }
+
+ QMenu::indicator {
+      width: 60px;
+      height: 13px;
+  }

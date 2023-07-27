@@ -1,0 +1,17 @@
+<RCC>
+    <qresource prefix="/resources">
+        <file>style/appstyles.qss</file>
+        <file>icons/arrow-down.png</file>
+        <file>icons/arrow-up.png</file>
+        <file>icons/arrow-down-hover.png</file>
+        <file>icons/arrow-up-hover.png</file>
+        <file>icons/down-arrows.png</file>
+        <file>icons/up-arrows.png</file>
+        <file>icons/down-arrows-hover.png</file>
+        <file>icons/up-arrows-hover.png</file>
+        <file>icons/timer.png</file>
+        <file>sound/notify.mp3</file>
+        <file>icons/exit.png</file>
+        <file>icons/open.png</file>
+    </qresource>
+</RCC>
