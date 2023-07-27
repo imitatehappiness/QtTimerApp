@@ -24,3 +24,5 @@ This Timer App is a customizable productivity tool that allows users to set up t
 >**Profile Qt:**  5.15.2 MinGW 64bit
 
 ## Usage example
+https://github.com/imitatehappiness/QtTimerApp/assets/79199956/d3883338-4f54-4f4a-9786-39c15ab266a9
+
