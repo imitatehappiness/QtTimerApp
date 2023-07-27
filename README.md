@@ -24,7 +24,7 @@ This Timer App is a customizable productivity tool that allows users to set up t
 >
 >**Profile Qt:**  5.15.2 MinGW 64bit
 
-## Build
+## How to build and run
 
 ``` bash
 cd C:/path_to_exe_file
