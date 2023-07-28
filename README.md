@@ -15,7 +15,7 @@ This Timer App is a customizable productivity tool that allows users to set up t
 
 3. **Pop-up Notifications and Sound Alerts:** The application displays pop-up notifications and plays sound alerts after the timer expires, informing users about the end of the working session or a break.
 
-4. **System Tray Integration:*** The app places an icon in the system tray, offering quick access to essential functions like opening the application or quitting it.
+4. **System Tray Integration:** The app places an icon in the system tray, offering quick access to essential functions like opening the application or quitting it.
 
 >**Compiler:**  MinGW 8.1.0 64bit
 >
