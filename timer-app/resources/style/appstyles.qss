@@ -93,6 +93,8 @@ QLabel#l_total_remaining,#l_reps,#l_work_time,#l_rest_time{
 QSpinBox{
     color: rgb(39, 154, 255);
     background-color: rgb(24, 24, 24);
+    selection-background-color: rgb(24, 24, 24);
+    selection-color: rgb(39, 154, 255);
     text-align: left;
     border-color: rgb(24, 24, 24);
     border: 0px;
@@ -154,6 +156,8 @@ QSpinBox::down-arrow:disabled {
 QTimeEdit{
     color: rgb(39, 154, 255);
     background-color: rgb(24, 24, 24);
+    selection-background-color: rgb(24, 24, 24);
+    selection-color: rgb(39, 154, 255);
     text-align: left;
     border-color: rgb(24, 24, 24);
     border: 0px;
@@ -238,7 +242,96 @@ QMenu::item:selected {
     color: rgb(24, 24, 24);
  }
 
- QMenu::indicator {
-      width: 60px;
-      height: 13px;
-  }
+QMenu::indicator {
+    width: 60px;
+    height: 13px;
+}
+
+/* ========================== Title Bar ========================== */
+
+#body{
+    background-color: rgb(24,24,24);
+    border-bottom: 2px rgb(24,24,24);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+#header{
+    height: 10px;
+    background-color: rgb(20, 20, 20);
+    border: 1px solid rgb(20, 20, 20);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+QPushButton#close{
+    image: url(":/resources/icons/close.png");
+}
+
+QPushButton#maximum{
+    image: url(":/resources/icons/maximum.png");
+}
+
+QPushButton#minimum{
+    image: url(":/resources/icons/minimum.png");
+}
+
+QPushButton#maximum {
+    padding: 10px;
+    margin: 3px;
+    font: 10pt;
+    background-color: rgb(33, 33, 33);
+    color: #EEEEEE;
+    border-radius: 4px;
+}
+
+QPushButton#maximum:hover{
+    background-color: rgb(148, 148, 148);
+    color: #EEEEEE;
+}
+
+QPushButton#maximum:pressed {
+    border: 2px solid rgb(33, 33, 33);
+    border-radius: 4px;
+}
+
+QPushButton#minimum {
+    padding: 10px;
+    margin: 3px;
+    font: 10pt;
+    background-color: rgb(33, 33, 33);
+    color: #EEEEEE;
+    border-radius: 4px;
+}
+
+QPushButton#minimum:hover{
+    background-color: rgb(148, 148, 148);
+}
+
+QPushButton#minimum:pressed {
+    border: 2px solid rgb(33, 33, 33);
+    border-radius: 4px;
+}
+
+QPushButton#close {
+    padding: 10px;
+    margin: 3px;
+    font: 10pt;
+    background-color: rgb(33, 33, 33);
+    color: #EEEEEE;
+    border-radius: 4px;
+}
+
+QPushButton#close:hover{
+    background-color: rgb(202, 49, 52);
+}
+
+QPushButton#close:pressed {
+    border: 2px solid rgb(33, 33, 33);
+    border-radius: 4px;
+}
+
+QPushButton#minimum:close {
+    border: 2px solid rgb(33, 33, 33);
+    border-radius: 4px;
+}

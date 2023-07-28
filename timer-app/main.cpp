@@ -1,4 +1,5 @@
 #include "mainwindow.h"
+#include "windowframe.h"
 
 #include <QApplication>
 #include <QProxyStyle>
@@ -6,8 +7,8 @@
 #include <QFile>
 #include <QMessageBox>
 
-int main(int argc, char *argv[]){
 
+int main(int argc, char *argv[]){
     QApplication a(argc, argv);
     a.setStyle(new QProxyStyle(QStyleFactory::create("Fusion")));
     QString stylePath = ":/resources/style/appstyles.qss";
@@ -26,7 +27,7 @@ int main(int argc, char *argv[]){
 
     a.setStyleSheet(styleQSS);
 
-    MainWindow w;
+    WindowFrame w(nullptr, new MainWindow());
     w.show();
     return a.exec();
 }
