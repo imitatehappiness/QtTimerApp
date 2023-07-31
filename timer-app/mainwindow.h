@@ -1,7 +1,6 @@
 #pragma once
 
 #include <QMainWindow>
-#include <QSystemTrayIcon>
 
 class PopUp;
 
@@ -39,9 +38,7 @@ class MainWindow : public QMainWindow{
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
-public slots:
-    /// Переопределенный метод
-    void show();
+
 private slots:
     void on_sB_reps_value_valueChanged(int arg1);
     void on_tE_work_time_value_userTimeChanged(const QTime &time);
@@ -62,8 +59,7 @@ private:
     sReps mReps;
     /// Объект всплывающего окна с уведомлением
     PopUp *mPopUp;
-    /// Объект будущей иконки приложения для трея
-    QSystemTrayIcon* mTrayIcon;
+
     /// Таймер на обновление
     QTimer *mTimer;
     /// Переменная хранящая сколько секунд осталось до конца таймер
@@ -81,8 +77,6 @@ private:
     void setTotalTimeInWidget();
     /// Вкл/Откл виджеты настройки тамера
     void setEnabledWidgets(const bool enabled);
-    /// Инициализация Tray Icon
-    void trayInit();
     /// Метод для расчета h m s через общее кол-во секунд
     void convertSStoHMS(uint ss, QString& h, QString& m, QString& second);
     /// Метод для воспроизведения звука

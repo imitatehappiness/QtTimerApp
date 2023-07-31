@@ -2,6 +2,7 @@
 #define WINDOWFRAME_H
 
 #include <QFrame>
+#include <QSystemTrayIcon>
 
 namespace Ui {
 class WindowFrame;
@@ -13,7 +14,9 @@ class WindowFrame : public QFrame{
 public:
     explicit WindowFrame(QWidget *parent = nullptr, QWidget *child=nullptr);
     ~WindowFrame();
-
+public slots:
+    /// Переопределенный метод
+    void show();
 private slots:
     /// Обработчик сигнала клика на кнопке "Закрыть".
     void on_close_clicked();
@@ -30,6 +33,15 @@ private:
     QPoint position;
     /// Размер границ окна.
     int borderSize;
+    /// Объект будущей иконки приложения для трея
+    QSystemTrayIcon* mTrayIcon;
+public:
+    /// Показать или скрыть кнопку минимизации окна.
+    void enableMinimum(bool enable);
+    /// Показать или скрыть кнопку максимизации окна.
+    void enableMaximum(bool enable);
+    /// Показать или скрыть кнопку закрытия окна.
+    void enableClose(bool enable);
 protected:
     /// Обработчик события нажатия кнопки мыши.
     void mousePressEvent(QMouseEvent *event) override;
@@ -41,16 +53,11 @@ protected:
     void mouseDoubleClickEvent(QMouseEvent *event) override;
     /// Обработчик нативного события окна.
     bool nativeEvent(const QByteArray &eventType, void *message, long *result);
-public:
-    /// Показать или скрыть кнопку минимизации окна.
-    void enableMinimum(bool enable);
-    /// Показать или скрыть кнопку максимизации окна.
-    void enableMaximum(bool enable);
-    /// Показать или скрыть кнопку закрытия окна.
-    void enableClose(bool enable);
-protected:
     /// Переопределение функции фильтрации событий для класса WindowFrame.
     bool eventFilter(QObject *obj, QEvent *event) override;
+private:
+    /// Инициализация Tray Icon
+    void trayInit();
 };
 
 #endif // WINDOWFRAME_H

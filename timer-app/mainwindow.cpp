@@ -20,7 +20,6 @@ MainWindow::MainWindow(QWidget *parent)
     mRemain = 0;
     mProgress = 0;
     mStatus = status::none;
-    trayInit();
 }
 
 MainWindow::~MainWindow(){
@@ -189,24 +188,6 @@ void MainWindow::setEnabledWidgets(const bool enabled){
     }
 }
 
-void MainWindow::trayInit(){
-    mTrayIcon = new QSystemTrayIcon(this);
-    mTrayIcon->setIcon(QIcon(":/resources/icons/timer.png"));
-
-    QMenu * menu = new QMenu(this);
-    QAction * viewWindow = new QAction(trUtf8("Open"), this);
-    QAction * quitAction = new QAction(trUtf8("Exit"), this);
-
-    connect(viewWindow, SIGNAL(triggered()), this, SLOT(show()));
-    connect(quitAction, SIGNAL(triggered()), this, SLOT(close()));
-
-    menu->addAction(viewWindow);
-    menu->addAction(quitAction);
-
-    mTrayIcon->setContextMenu(menu);
-    mTrayIcon->show();
-}
-
 void MainWindow::convertSStoHMS(uint ss, QString &hour, QString &minute, QString &second){
     hour   = (ss / 3600) < 10 ? "0" + QString::number(ss / 3600) : QString::number(ss / 3600);
     minute = ((ss % 3600) / 60) < 10 ? "0" + QString::number((ss % 3600) / 60) : QString::number((ss % 3600) / 60);
@@ -220,11 +201,3 @@ void MainWindow::playSound(const QString &path){
     player->play();
 }
 
-void MainWindow::show(){
-    if(!isHidden()) {
-        showNormal();
-        activateWindow();
-    } else {
-        QWidget::show();
-    }
-}

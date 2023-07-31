@@ -5,6 +5,8 @@
 #include <windows.h>
 #include <windowsx.h>
 #include <QDebug>
+#include <QMenu>
+#include <QAction>
 
 /// @brief Конструктор класса WindowFrame.
 /// @param parent Родительский виджет.
@@ -21,6 +23,8 @@ WindowFrame::WindowFrame(QWidget *parent, QWidget *child)
         mainBody->installEventFilter(this);
         resize(child->size());
     }
+
+    trayInit();
 }
 
 
@@ -36,10 +40,18 @@ WindowFrame::~WindowFrame(){
     delete ui;
 }
 
+void WindowFrame::show(){
+    if(!isHidden()) {
+        showNormal();
+        activateWindow();
+    } else {
+        QWidget::show();
+    }
+}
 
 /// @brief Обработчик сигнала клика на кнопке "Закрыть".
 void WindowFrame::on_close_clicked(){
-    close();
+    hide();
 }
 
 
@@ -203,4 +215,22 @@ bool WindowFrame::eventFilter(QObject *obj, QEvent *event) {
         return QFrame::eventFilter(obj,event);
     }
     return false;
+}
+
+void WindowFrame::trayInit(){
+    mTrayIcon = new QSystemTrayIcon(this);
+    mTrayIcon->setIcon(QIcon(":/resources/icons/timer.png"));
+
+    QMenu * menu = new QMenu(this);
+    QAction * viewWindow = new QAction(trUtf8("Open"), this);
+    QAction * quitAction = new QAction(trUtf8("Exit"), this);
+
+    connect(viewWindow, SIGNAL(triggered()), this, SLOT(show()));
+    connect(quitAction, SIGNAL(triggered()), this, SLOT(close()));
+
+    menu->addAction(viewWindow);
+    menu->addAction(quitAction);
+
+    mTrayIcon->setContextMenu(menu);
+    mTrayIcon->show();
 }
