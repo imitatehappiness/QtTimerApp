@@ -21,13 +21,6 @@ This Timer App is a customizable productivity tool that allows users to set up t
 >
 >**Profile Qt:**  5.15.2 MinGW 64bit
 
-## How to build and run
-
-``` bash
-cd C:/path_to_exe_file
-windeployqt --compiler-runtime C:/path_to_exe_file
-./timer-app.exe
-```
 ## Usage example
 https://github.com/imitatehappiness/QtTimerApp/assets/79199956/d826dab3-e049-405e-952f-d3f8b3e75cb4
 
